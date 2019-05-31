@@ -12,7 +12,9 @@ const fetchWeather = (latitude, longitude, callback) => {
             callback(undefined, {
                 temperature: body.currently.temperature,
                 summary: body.currently.summary,
-                chance: body.currently.precipProbability
+                chance: body.currently.precipProbability,
+                high: body.daily.data[0].temperatureHigh,
+                low: body.daily.data[0].temperatureLow
             })
         }
     })

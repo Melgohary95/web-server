@@ -12,6 +12,8 @@ const form = document.querySelector('form')
 const inputValue = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const messageThree = document.querySelector('#message-3')
+const messageFour = document.querySelector('#message-4')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -26,6 +28,9 @@ form.addEventListener('submit', (e) => {
                 // console.log(data)
                 messageOne.textContent = 'Summary ' + data.summary
                 messageTwo.textContent = 'Temperature ' + data.temperature
+                messageThree.textContent = 'High ' + data.high
+                messageFour.textContent = 'Low ' + data.low
+                console.log(data)
             }
         })
     })
